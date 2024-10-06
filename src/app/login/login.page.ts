@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-  import { Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
-
-  ngOnInit() {
-  }
+  email: string = '';
+  password: string = '';
+  emailInvalid: boolean = false;
 
   constructor(private router: Router) {}
 
-  goToHome() {
-    this.router.navigate(['/home']); // Redirige a la página de inicio
-  }
+  ngOnInit() {}
 
+  login() {
+    this.emailInvalid = false;
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(this.email)) {
+      this.emailInvalid = true;
+      return;
+    }
+
+    this.router.navigate(['/home']);
+  }
 }

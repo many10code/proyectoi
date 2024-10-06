@@ -1,20 +1,23 @@
-<ion-content style="margin-top: 80px;">
-  <form (ngSubmit)="goToHome()">
-    <ion-item>
-      <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
+<ion-content>
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+    <img src="../../assets/img/logo.jpeg" alt="Logo" style="width: 150px; margin-bottom: 20px;">
 
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
+    <form (ngSubmit)="login()" style="width: 80%; max-width: 400px;">
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
 
-    <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
 
-    <p style="color: red;">Error message</p>
-  </form>
+      <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
 
-  
-  <ion-button expand="full" color="secondary">Registrarse</ion-button>
+      <p *ngIf="emailInvalid" style="color: red;">Por favor, ingresa un correo válido.</p>
+    </form>
+  </div>
 </ion-content>
+
+

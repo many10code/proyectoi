@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar Proveedor</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="save"></ion-icon>
+      </ion-button>
+      <ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <p><strong>Fecha de registro:</strong> 01/09/2024</p>
+          </ion-col>
+          <ion-col size="6">
+            <p><strong>Id de proveedor:</strong> 1</p>
+          </ion-col>
+        </ion-row>
+        <ion-item>
+          <ion-label position="stacked"><strong>Nombre:</strong></ion-label>
+          <ion-input value="Mayoreo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked"><strong>Teléfono:</strong></ion-label>
+          <ion-input type="tel" value="456 234 5223"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked"><strong>Correo:</strong></ion-label>
+          <ion-input type="email" value="mayoreo@gmail.com"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked"><strong>Dirección:</strong></ion-label>
+          <ion-input value="Cordoba, ver."></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked"><strong>Estado:</strong></ion-label>
+          <ion-select value="Activo">
+            <ion-select-option value="Activo">Activo</ion-select-option>
+            <ion-select-option value="Inactivo">Inactivo</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
